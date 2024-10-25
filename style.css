@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+  position: relative; /* Keep relative positioning for child elements */
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.profile-pic img {
+  width: 100px; /* Adjust the width of the profile picture */
+  height: 100px; /* Adjust the height of the profile picture */
+  border-radius: 50%; /* Make the image round */
+  border: 3px solid #ffa500; /* Border color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.profile-pic img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Home Icon Styles */
+.home-icon {
+  position: absolute; /* Position the icon absolutely */
+  top: 5px; /* Adjust the top position */
+  right: 5px; /* Adjust the right position */
+  color: #ffa500; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.home-icon:hover {
+  color: #fff; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Keep the sidebar fixed on the left */
+  left: 0;
+  top: 0;
+  width: 250px; /* Width of the sidebar */
+  height: 100%; /* Full height */
+  background-color: #444; /* Sidebar background color */
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.sidebar nav a:hover {
+  color: #ffa500; /* Highlight color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sidebar nav a:focus {
+  outline: 2px dashed #ffa500; /* Focus outline */
+  outline-offset: 4px;
+}
+
+/* Navigation Styles */
+nav {
+  margin-top: 20px; /* Space between sidebar and menu */
+}
+
+nav ul {
+  list-style: none; /* No bullets */
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Align items in a column */
+}
+
+nav ul li {
+  margin: 15px 0; /* Space between menu items */
+}
+
+nav a {
+  display: block; /* Make the entire area of the link clickable */
+  padding: 10px 15px; /* Internal spacing */
+  color: #fff; /* Text color */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #444; /* Background of the link */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+nav a:hover {
+  background-color: #ffa500; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+nav a.active {
+  background-color: #ffa500; /* Active color for the current link */
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 270px; /* Leave space for the sidebar */
+  padding: 20px;
+}
+
+/* Section Styles */
+section {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px; /* Constrain width for better readability */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Styles */
+.project {
+  margin-bottom: 30px;
+  background-color: #f9f9f9; /* Light background for project sections */
+  padding: 20px; /* Padding around project sections */
+  border-radius: 8px; /* Rounded corners */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.project h3 {
+  color: #333;
+}
+
+.project:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #444;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #ffa500;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+footer a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove sidebar margin on small screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  section {
+    margin: 10px; /* Reduce margin on smaller screens */
+  }
+
+  nav ul li {
+    display: block; /* Stack nav items on smaller screens */
+    margin: 10px 0;
+  }
+}
+
+/* Typing Text Styles */
+#typing-text {
+  font-size: 18px;
+  color: #333;
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Ensure text is visible */
+  border: none; /* Remove the border */
+  overflow: hidden; /* Hide overflow for typing effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  border-right: 2px solid #ffa500; /* Cursor effect */
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing effect */
+}
+
+/* Optional: Blinking Cursor Effect */
+.blink {
+  animation: blink-caret .75s step-end infinite; /* Blink effect */
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffa500; /* Adjust the caret color */
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
